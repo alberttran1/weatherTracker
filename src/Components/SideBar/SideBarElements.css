@@ -1,0 +1,161 @@
+.sidebar {
+  right: 0;
+  top: 0;
+  position: fixed;
+  background-color: rgba(10,10,10,0.5);
+  height: -webkit-fill-available;
+  width: 30vw;
+  backdrop-filter: blur(13px);
+}
+
+.input-section {
+  height: 5vw;
+  position: relative;
+}
+
+.transparent-font {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.25vh;
+  font-weight: 300;
+  color: rgba(255,255,255,0.5);
+  height: 2.25vh;
+}
+
+.regular-font {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.25vh;
+  font-weight: 300;
+  color: white;
+  float: right;
+}
+
+.transparent-font:hover {
+  color: white;
+  transition: 0.5s all ease-out;
+}
+
+.input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+  height: 4vh;
+  width: 20vw;
+  bottom: 0;
+  position: absolute;
+
+  margin: 0 2.5rem;
+}
+
+.input-button:hover {
+  color: white;
+}
+
+.input::placeholder {
+  color: white;
+  opacity: 0.2;
+}
+
+.input::placeholder:hover {
+  opacity: 0;
+}
+
+.input:focus, .input:hover {
+  outline: none;
+  color: rgba(255,255,255,0.8);
+  border-bottom: 2px solid white;
+  transition: 0.5s all ease-out;
+}
+
+.content-wrapper {
+  padding: 0 2.5rem;
+  height:  -webkit-fill-available;
+}
+
+.info-section {
+  height: 33vh;
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.info-title {
+  margin-top: 5vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.25vh;
+  font-weight: 300;
+  color: rgba(255,255,255,0.9);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.info-column {
+  height: 2.25vh;
+  animation: fadeIn 2s ease-in-out;
+}
+
+
+@media screen and (max-width: 600px) {
+  #hero-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36.3rem;
+  }
+
+  .sidebar {
+    width: 100%;
+    top: 32rem;
+    position: absolute;
+    height: 25rem;
+    padding-bottom: 2rem;
+  }
+  
+  .input-section {
+    height: 4rem;
+  }
+  
+  .transparent-font:hover {
+    color: white;
+    transition: 0.5s all ease-out;
+  }
+  
+  .input {
+    height: 2rem;
+    width: 60%;
+    bottom: 0;
+    position: absolute;
+  
+    margin: 0 2.5rem;
+  }
+  
+  .input-button:hover {
+    color: white;
+  }
+  
+  .input::placeholder {
+    color: white;
+    opacity: 0.2;
+  }
+  
+  .input::placeholder:hover {
+    opacity: 0;
+  }
+  
+  .input:focus, .input:hover {
+    outline: none;
+    color: rgba(255,255,255,0.8);
+    border-bottom: 2px solid white;
+    transition: 0.5s all ease-out;
+  }
+  
+  .content-wrapper {
+    padding: 0 2.5rem;
+    height:  fit-content;
+  }
+
+  .non-mobile {
+    display: none;
+  }
+}
