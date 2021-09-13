@@ -22,6 +22,7 @@ const HeroSection = () => {
 
     useEffect(() => {
       getInfo({cityName: randomCityNames[Math.floor(Math.random()*randomCityNames.length)]})
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])  
 
   // useEffect(() => {
