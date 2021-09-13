@@ -30,6 +30,7 @@ const HeroSection = () => {
         getInfo({cityName: randomCityNames[Math.floor(Math.random()*randomCityNames.length)]})
       }
     )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   
   const getInfo = async (locationData) => {
@@ -129,7 +130,7 @@ const HeroSection = () => {
           </div>
         </span>
         <span  className="top-margin">
-          <img className="icon" src={weatherData[curWeatherType].icon}/>
+          <img className="icon" src={weatherData[curWeatherType].icon} alt=""/>
           <div className="small-text">{curData ? curData.weather[0].description : ""}</div>
         </span>
       </div>
