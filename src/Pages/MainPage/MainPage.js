@@ -20,18 +20,22 @@ const HeroSection = () => {
                                                 ["", ""],
                                                 ["", ""]])
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        getInfo({geoCode:[position.coords.latitude,position.coords.longitude]})
-      },
-      (error) => {
-        console.error(error);
-        getInfo({cityName: randomCityNames[Math.floor(Math.random()*randomCityNames.length)]})
-      }
-    )
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
+    useEffect(() => {
+      getInfo({cityName: randomCityNames[Math.floor(Math.random()*randomCityNames.length)]})
+    },[])  
+
+  // useEffect(() => {
+  //   navigator.geolocation.getCurrentPosition(
+  //     (position) => {
+  //       getInfo({geoCode:[position.coords.latitude,position.coords.longitude]})
+  //     },
+  //     (error) => {
+  //       console.error(error);
+  //       getInfo({cityName: randomCityNames[Math.floor(Math.random()*randomCityNames.length)]})
+  //     }
+  //   )
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // },[])
   
   const getInfo = async (locationData) => {
     try {
